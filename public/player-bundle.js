@@ -311,5 +311,15 @@ window.play = function () {
     player.resolve('https://soundcloud.com/biskwiq/dawntheopus', function (track) {
             player.play();
     });
+
+    window.pause = function ()
+    {
+        player.pause();
+    }
+
+    window.setVolume = function (level) {
+        level = level/100;
+        player.setVolume(level);
+    }
 }
 },{"soundcloud-audio":1}]},{},[2]);

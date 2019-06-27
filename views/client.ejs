@@ -1,4 +1,13 @@
 <script src="player-bundle.js"></script>
 <body>
     <button onclick="play()">Play</button>
+    <button onclick="pause()">Pause</button>
+    Volume: <input type="range" name="volume-ranger" id="volume-ranger" min="0" max="100" value="80">
 </body>
+
+<script>
+    let volume = document.querySelector('#volume-ranger');
+    volume.oninput = function (){
+        setVolume(this.value);
+    }
+</script>
